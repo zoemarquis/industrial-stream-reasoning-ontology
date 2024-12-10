@@ -3,7 +3,7 @@ Concepts :
 - Ligne de production
 - Propriétés observables (Oil_temps, Trans_temp, Rotor_speed...)
 - Sensor
-- Obs
+- Obs (version abstraite de l'observation)
 
 Relations :
 Machines --isPartOf--> Ligne
