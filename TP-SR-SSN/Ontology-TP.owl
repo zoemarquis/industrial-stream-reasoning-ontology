@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:Ontology-TP="http://semanticweb.org/Ontology-TP#">
     <owl:Ontology rdf:about="http://semanticweb.org/Ontology-TP"/>
     
@@ -298,11 +299,627 @@
     
 
 
+    <!-- http://semanticweb.org/Ontology-TP#OilTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#OilTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://semanticweb.org/Ontology-TP#PL1 -->
 
 
     <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#PL1">
         <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Line"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-0"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-1"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-10"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-11"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-12"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-13"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-14"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-15"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-16"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-17"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-18"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-19"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-2"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-20"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-21"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-22"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-23"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-24"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-25"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-3"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-4"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-5"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-6"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-7"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-8"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-0"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>51^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-1"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>70^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-10"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>72^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-11">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-11"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>71^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-12">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-12"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>63^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-13">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-13"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>87^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-14">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-14"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>71^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-15">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-15"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>83^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-16">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-16"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>83^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-17">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-17"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>50^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-18">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-18"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>77^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-19">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-19"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>58^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-2"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>74^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-20 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-20">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-20"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>88^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-21">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-21"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>58^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-22">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-22"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>74^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-23">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-23"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>84^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-24">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-24"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>83^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-25">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-25"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>86^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-3"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>76^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-4"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>76^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-5"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>88^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-6"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>87^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-7"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>85^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-8"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>78^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_OilTemp-Obs-9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_OilTemp-9"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#OilTemp"/>
+        <sosa:hasSimpleResult>55^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-0">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:24.496^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:26.586^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:45.25^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-11">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:47.331^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-12">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:49.411^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-13">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:51.488^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-14">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:53.57^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:55.639^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-16">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:57.722^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:59.796^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-18">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:01.868^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-19">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:03.95^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:28.657^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-20 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:06.035^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-21">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:08.113^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-22">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:10.183^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-23">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:12.261^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-24">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:14.325^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-25">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:01:16.399^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:30.733^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:32.796^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:34.874^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:36.955^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:39.028^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:41.101^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_OilTemp-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_OilTemp-9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-12 16:00:43.183^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
     </owl:NamedIndividual>
     
 

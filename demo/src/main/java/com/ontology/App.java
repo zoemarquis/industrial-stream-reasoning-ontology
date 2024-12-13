@@ -74,6 +74,10 @@ public class App {
 		ontology.add(factory.getOWLDeclarationAxiom(Situation_S1));
 		ontology.add(factory.getOWLSubClassOfAxiom(Situation_S1, Situation));
 
+		OWLClass Situation_S6 = factory.getOWLClass(IRI.create(ns, "Situation-S6"));
+		ontology.add(factory.getOWLDeclarationAxiom(Situation_S6));
+		ontology.add(factory.getOWLSubClassOfAxiom(Situation_S6, Situation));
+
 		OWLClass Sensor = factory.getOWLClass(IRI.create(pre_SOSAOnt + "Sensor"));
 		OWLClass ObservableProperty = factory.getOWLClass(IRI.create(pre_SOSAOnt + "ObservableProperty"));
 		OWLClass Observation = factory.getOWLClass(IRI.create(pre_SOSAOnt + "Observation"));
@@ -405,6 +409,7 @@ public class App {
 		ontology.add(OP_RotorPitchAngle);
 
 		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M4, RotorPitchAngle);
+
 
 
 
