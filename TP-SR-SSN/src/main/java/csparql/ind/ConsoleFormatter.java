@@ -47,11 +47,12 @@ public class ConsoleFormatter extends ResultFormatter {
 
           System.out.println(machine + " and " + prodline + " are involved in situation " + situationName);
 
-          if ("S6detection".equals(situationName)) {
+          if ("S6".equals(situationName)) {
             System.out.println("Scenario S6 detected : M3 filter obstruction");
-          } else if ("S1detection".equals(situationName)) {
+          } /*else if ("S1".equals(situationName)) {
             System.out.println("Scenario S1 detected : M1 oil leakage");
           }
+            */
 
           OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
           OWLIndividual situation = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));

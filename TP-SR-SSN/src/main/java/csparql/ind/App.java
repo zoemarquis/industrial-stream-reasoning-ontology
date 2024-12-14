@@ -36,7 +36,7 @@ public class App {
 
 			//Add the static model
 			engine.putStaticNamedModel("http://streamreasoning.org/Ontology-TP",CsparqlUtils.serializeRDFFile(fileOntology));
-			
+
 
 			String queryS6 = "REGISTER QUERY S6detection AS "
 				+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
@@ -58,12 +58,14 @@ public class App {
 				+ "  ?o2        :hasSimpleResult ?v2 ."
 				+ "  ?o3        :hasSimpleResult ?v3 ."
 				+ " FILTER ( "
-				+ " 	?v1 > 60 && "
-				+ " 	?v2 < 35 && "
-				+ " 	?v3 > 45 "
-				+ " } ";
+				+ " 	?m = :M3 && "
+				+ " 	?v1 > 60 && " // ConvWaterTemps > 60
+				+ " 	?v2 < 35 && " // TransGridTemp < 35
+				+ " 	?v3 > 45 " // GeneratorTemp_Thread > 45
+				+ "   ) "
+				+ " }} ";
 
-			String queryS1 = "REGISTER QUERY S1detection AS "
+			/*String queryS1 = "REGISTER QUERY S1 AS "
 				+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
 				+ "PREFIX sosa: <http://www.w3.org/ns/sosa/> "
 				+ "SELECT ?m ?pl "
@@ -97,7 +99,7 @@ public class App {
 				+ " 	?v4 < 800 && "
 				+ " 	?v5 < 35 "
 				+ "   ) "
-				+ " } ";
+				+ " }} ";*/
 
 
 			OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
@@ -106,55 +108,57 @@ public class App {
 			String ns = ontologyURI + "#";
 			final OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File(fileOntology));
 			
-			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",2,50,90,ontology,factory);
-			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",2,20,60,ontology,factory); // TODO valeurs ?
-			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",2,20,80,ontology,factory); // TODO valeurs ?
 
-			SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
-			SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,60,ontology,factory);
-			SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
-			SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,500,1500,ontology,factory);
-			SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,20,50,ontology,factory);
+			// Valeurs min et max de ces 3 streams afin de provoquer la situation S6
+			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",1,60,90,ontology,factory);
+			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",1,20,35,ontology,factory);
+			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",1,45,80,ontology,factory);
+			
+			//SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
+			//SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,60,ontology,factory);
+			//SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
+			//SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,500,1500,ontology,factory);
+			//SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,20,50,ontology,factory);
 
 			//Register new streams in the engine
 			engine.registerStream(Stream_ConvWaterTemp);
 			engine.registerStream(Stream_TransGridTemp);
 			engine.registerStream(Stream_GeneratorTemp);
 
-			engine.registerStream(Stream_OilTemp);
-			engine.registerStream(Stream_TransformerTemp);
-			engine.registerStream(Stream_ControlerTemp);
-			engine.registerStream(Stream_GeneratorCurr);
-			engine.registerStream(Stream_PlatformTemp);
-
+			//engine.registerStream(Stream_OilTemp);
+			//engine.registerStream(Stream_TransformerTemp);
+			//engine.registerStream(Stream_ControlerTemp);
+			//engine.registerStream(Stream_GeneratorCurr);
+			//engine.registerStream(Stream_PlatformTemp);
+			
 			Thread Stream_ConvWaterTemp_Thread = new Thread(Stream_ConvWaterTemp);
 			Thread Stream_TransGridTemp_Thread = new Thread(Stream_TransGridTemp);
 			Thread Stream_GeneratorTemp_Thread = new Thread(Stream_GeneratorTemp);
 
-			Thread Stream_OilTemp_Thread = new Thread(Stream_OilTemp);
-			Thread Stream_TransformerTemp_Thread = new Thread(Stream_TransformerTemp);
-			Thread Stream_ControlerTemp_Thread = new Thread(Stream_ControlerTemp);
-			Thread Stream_GeneratorCurr_Thread = new Thread(Stream_GeneratorCurr);
-			Thread Stream_PlatformTemp_Thread = new Thread(Stream_PlatformTemp);
-			
+			//Thread Stream_OilTemp_Thread = new Thread(Stream_OilTemp);
+			//Thread Stream_TransformerTemp_Thread = new Thread(Stream_TransformerTemp);
+			//Thread Stream_ControlerTemp_Thread = new Thread(Stream_ControlerTemp);
+			//Thread Stream_GeneratorCurr_Thread = new Thread(Stream_GeneratorCurr);
+			//Thread Stream_PlatformTemp_Thread = new Thread(Stream_PlatformTemp);
+
 			//Register new query in the engine
 			CsparqlQueryResultProxy c_S6 = engine.registerQuery(queryS6, false);
-			CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
+			//CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
 
 			//Attach a result consumer to the query result proxy to print the results on the console
 			c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
-			c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
-
+			//c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
+			
 			//Start streaming data
 			Stream_ConvWaterTemp_Thread.start();
 			Stream_TransGridTemp_Thread.start();
 			Stream_GeneratorTemp_Thread.start();
-
-			Stream_OilTemp_Thread.start();
-			Stream_TransformerTemp_Thread.start();
-			Stream_ControlerTemp_Thread.start();
-			Stream_GeneratorCurr_Thread.start();
-			Stream_PlatformTemp_Thread.start();
+			
+			//Stream_OilTemp_Thread.start();
+			//Stream_TransformerTemp_Thread.start();
+			//Stream_ControlerTemp_Thread.start();
+			//Stream_GeneratorCurr_Thread.start();
+			//Stream_PlatformTemp_Thread.start();
 
 		}catch (Exception e) {
 			logger.error(e.getMessage(), e);

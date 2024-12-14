@@ -81,7 +81,11 @@ public class SensorsStreamer extends RdfStream implements Runnable  {
 				q = new RdfQuadruple(baseUri + "t-obs-S_" + prop + "-"+ timeIndex, baseUri + "inXSDDateTime", date + "^^http://www.w3.org/2001/XMLSchema#dateTimeStamp", System.currentTimeMillis());
 				System.out.println(q);
 				this.put(q);
-				
+
+				// DEBUG : Afficher RDF
+				System.out.println("RDF quadruple : " + q);
+				System.out.println("Valeur " + prop + " : " + result);
+
 				OWLIndividual sensor = factory.getOWLNamedIndividual(IRI.create(ns,"S_" + prop));
 				OWLClassAssertionAxiom sensorType = factory.getOWLClassAssertionAxiom(Sensor, sensor);
 				ontology.add(sensorType);

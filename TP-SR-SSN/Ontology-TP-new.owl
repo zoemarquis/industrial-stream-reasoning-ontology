@@ -228,6 +228,15 @@
     
 
 
+    <!-- http://semanticweb.org/Ontology-TP#Situation-S6 -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Situation-S6">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2006/time#Instant -->
 
 
@@ -291,9 +300,61 @@
 
     <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M1">
         <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ControlerTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorCurr"/>
         <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/OilTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_ControlerTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorCurr"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/TransformerTemp"/>
         <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
         <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_OilTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_TransformerTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M2">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GearboxTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorSpeed"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_GearboxTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorSpeed"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M3">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ConvWaterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ConverterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_ConvWaterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_ConverterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_TransGridTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/TransGridTemp"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M4">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/RotorPitchAngle"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/RotorSpeed"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_RotorPitchAngle"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_RotorSpeed"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
     </owl:NamedIndividual>
     
 
@@ -303,6 +364,84 @@
 
     <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#PL1">
         <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Line"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/EnvironmentTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/PlatformTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/PowerOutput"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_EnvironmentTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_PlatformTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/S_PowerOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ControlerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ControlerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/EnvironmentTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/EnvironmentTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GearboxTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GearboxTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorCurr -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorCurr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </owl:NamedIndividual>
     
 
@@ -316,11 +455,191 @@
     
 
 
+    <!-- http://www.w3.org/ns/sosa/PlatformTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/PlatformTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/PowerOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/PowerOutput">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/RotorPitchAngle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/RotorPitchAngle">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/RotorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/RotorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ControlerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ControlerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_EnvironmentTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_EnvironmentTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GearboxTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GearboxTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorCurr -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorCurr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3.org/ns/sosa/S_OilTemp -->
 
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_OilTemp">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_PlatformTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_PlatformTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_PowerOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_PowerOutput">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_RotorPitchAngle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_RotorPitchAngle">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_RotorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_RotorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_TransformerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_TransformerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/TransformerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/TransformerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
