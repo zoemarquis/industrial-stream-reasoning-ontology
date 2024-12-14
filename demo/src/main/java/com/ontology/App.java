@@ -258,7 +258,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_ControlerTemp = factory.getOWLClassAssertionAxiom(Sensor, S_ControlerTemp);
 		ontology.add(sensorS_ControlerTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M1, S_ControlerTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M1, S_ControlerTemp);
 
 		OWLIndividual ControlerTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"ControlerTemp"));
 		OWLClassAssertionAxiom OP_ControlerTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, ControlerTemp);
@@ -270,7 +270,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_GeneratorCurr = factory.getOWLClassAssertionAxiom(Sensor, S_GeneratorCurr);
 		ontology.add(sensorS_GeneratorCurr);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M1, S_GeneratorCurr);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M1, S_GeneratorCurr);
 
 		OWLIndividual GeneratorCurr = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"GeneratorCurr"));
 		OWLClassAssertionAxiom OP_GeneratorCurr = factory.getOWLClassAssertionAxiom(ObservableProperty, GeneratorCurr);
@@ -282,7 +282,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_PlatformTemp = factory.getOWLClassAssertionAxiom(Sensor, S_PlatformTemp);
 		ontology.add(sensorS_PlatformTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, PL1, S_PlatformTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, PL1, S_PlatformTemp);
 
 		OWLIndividual PlatformTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"PlatformTemp"));
 		OWLClassAssertionAxiom OP_PlatformTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, PlatformTemp);
@@ -294,7 +294,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_GearboxTemp = factory.getOWLClassAssertionAxiom(Sensor, S_GearboxTemp);
 		ontology.add(sensorS_GearboxTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M2, S_GearboxTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M2, S_GearboxTemp);
 
 		OWLIndividual GearboxTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"GearboxTemp"));
 		OWLClassAssertionAxiom OP_GearboxTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, GearboxTemp);
@@ -306,7 +306,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_GeneratorSpeed = factory.getOWLClassAssertionAxiom(Sensor, S_GeneratorSpeed);
 		ontology.add(sensorS_GeneratorSpeed);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M2, S_GeneratorSpeed);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M2, S_GeneratorSpeed);
 
 		OWLIndividual GeneratorSpeed = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"GeneratorSpeed"));
 		OWLClassAssertionAxiom OP_GeneratorSpeed = factory.getOWLClassAssertionAxiom(ObservableProperty, GeneratorSpeed);
@@ -318,7 +318,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_EnvironmentTemp = factory.getOWLClassAssertionAxiom(Sensor, S_EnvironmentTemp);
 		ontology.add(sensorS_EnvironmentTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, PL1, S_EnvironmentTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, PL1, S_EnvironmentTemp);
 
 		OWLIndividual EnvironmentTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"EnvironmentTemp"));
 		OWLClassAssertionAxiom OP_EnvironmentTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, EnvironmentTemp);
@@ -330,7 +330,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_PowerOutput = factory.getOWLClassAssertionAxiom(Sensor, S_PowerOutput);
 		ontology.add(sensorS_PowerOutput);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, PL1, S_PowerOutput);
+		oa.relateIndividuals(ontology, manager, factory, hosts, PL1, S_PowerOutput);
 
 		OWLIndividual PowerOutput = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"PowerOutput"));
 		OWLClassAssertionAxiom OP_PowerOutput = factory.getOWLClassAssertionAxiom(ObservableProperty, PowerOutput);
@@ -342,7 +342,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_ConvWaterTemp = factory.getOWLClassAssertionAxiom(Sensor, S_ConvWaterTemp);
 		ontology.add(sensorS_ConvWaterTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M3, S_ConvWaterTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M3, S_ConvWaterTemp);
 
 		OWLIndividual ConvWaterTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"ConvWaterTemp"));
 		OWLClassAssertionAxiom OP_ConvWaterTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, ConvWaterTemp);
@@ -354,7 +354,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_TransGridTemp = factory.getOWLClassAssertionAxiom(Sensor, S_TransGridTemp);
 		ontology.add(sensorS_TransGridTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M3, S_TransGridTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M3, S_TransGridTemp);
 
 		OWLIndividual TransGridTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"TransGridTemp"));
 		OWLClassAssertionAxiom OP_TransGridTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, TransGridTemp);
@@ -366,7 +366,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_GeneratorTemp = factory.getOWLClassAssertionAxiom(Sensor, S_GeneratorTemp);
 		ontology.add(sensorS_GeneratorTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M3, S_GeneratorTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M3, S_GeneratorTemp);
 
 		OWLIndividual GeneratorTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"GeneratorTemp"));
 		OWLClassAssertionAxiom OP_GeneratorTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, GeneratorTemp);
@@ -378,7 +378,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_ConverterTemp = factory.getOWLClassAssertionAxiom(Sensor, S_ConverterTemp);
 		ontology.add(sensorS_ConverterTemp);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M3, S_ConverterTemp);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M3, S_ConverterTemp);
 
 		OWLIndividual ConverterTemp = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"ConverterTemp"));
 		OWLClassAssertionAxiom OP_ConverterTemp = factory.getOWLClassAssertionAxiom(ObservableProperty, ConverterTemp);
@@ -390,7 +390,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_RotorSpeed = factory.getOWLClassAssertionAxiom(Sensor, S_RotorSpeed);
 		ontology.add(sensorS_RotorSpeed);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M4, S_RotorSpeed);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M4, S_RotorSpeed);
 
 		OWLIndividual RotorSpeed = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"RotorSpeed"));
 		OWLClassAssertionAxiom OP_RotorSpeed = factory.getOWLClassAssertionAxiom(ObservableProperty, RotorSpeed);
@@ -402,7 +402,7 @@ public class App {
 		OWLClassAssertionAxiom sensorS_RotorPitchAngle = factory.getOWLClassAssertionAxiom(Sensor, S_RotorPitchAngle);
 		ontology.add(sensorS_RotorPitchAngle);
 
-		oa.relateIndividuals(ontology, manager, factory, hasObservableProperty, M4, S_RotorPitchAngle);
+		oa.relateIndividuals(ontology, manager, factory, hosts, M4, S_RotorPitchAngle);
 
 		OWLIndividual RotorPitchAngle = factory.getOWLNamedIndividual(IRI.create(pre_SOSAOnt,"RotorPitchAngle"));
 		OWLClassAssertionAxiom OP_RotorPitchAngle = factory.getOWLClassAssertionAxiom(ObservableProperty, RotorPitchAngle);

@@ -47,7 +47,7 @@ public class App {
 				+ "FROM STREAM <Stream_S_GeneratorTemp> [RANGE 15s STEP 5s] "
 				+ "FROM <http://streamreasoning.org/Ontology-TP> "
 				+ "WHERE { "
-				+ "{ ?m         :isPartOf        ?pl ."
+				+ "  ?m         :isPartOf        ?pl ."
 				+ "  ?m         sosa:hosts       sosa:S_ConvWaterTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_TransGridTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_GeneratorTemp ."
@@ -58,12 +58,11 @@ public class App {
 				+ "  ?o2        :hasSimpleResult ?v2 ."
 				+ "  ?o3        :hasSimpleResult ?v3 ."
 				+ " FILTER ( "
-				+ " 	?m = :M3 && "
-				+ " 	?v1 > 60 && " // ConvWaterTemps > 60
-				+ " 	?v2 < 35 && " // TransGridTemp < 35
-				+ " 	?v3 > 45 " // GeneratorTemp_Thread > 45
-				+ "   ) "
-				+ " }} ";
+				+ " 	?v1 > 60 && "
+				+ " 	?v2 < 35 && "
+				+ " 	?v3 > 45 "
+				+ "     ) "
+				+ " } ";
 
 			/*String queryS1 = "REGISTER QUERY S1 AS "
 				+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
@@ -76,7 +75,7 @@ public class App {
 				+ "FROM STREAM <Stream_S_PlatformTemp> [RANGE 20s STEP 5s] "
 				+ "FROM <http://streamreasoning.org/Ontology-TP> "
 				+ "WHERE { "
-				+ "{ ?m         :isPartOf        ?pl ."
+				+ "  ?m         :isPartOf        ?pl ."
 				+ "  ?m         sosa:hosts       sosa:S_OilTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_TransformerTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_ControlerTemp ."
@@ -146,9 +145,9 @@ public class App {
 			//CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
 
 			//Attach a result consumer to the query result proxy to print the results on the console
-			c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
-			//c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
-			
+			// c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
+			c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
+
 			//Start streaming data
 			Stream_ConvWaterTemp_Thread.start();
 			Stream_TransGridTemp_Thread.start();
