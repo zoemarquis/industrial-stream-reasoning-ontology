@@ -106,15 +106,15 @@ public class App {
 			String ns = ontologyURI + "#";
 			final OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File(fileOntology));
 			
-			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",2,50,90,ontology,factory); // TODO valeurs ?
-			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",2,50,90,ontology,factory); // TODO valeurs ?
-			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",2,50,90,ontology,factory); // TODO valeurs ?
+			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",2,50,90,ontology,factory);
+			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",2,20,60,ontology,factory); // TODO valeurs ?
+			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",2,20,80,ontology,factory); // TODO valeurs ?
 
-			SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,50,90,ontology,factory);
-			SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,50,90,ontology,factory);
-			SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,50,90,ontology,factory);
-			SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,50,90,ontology,factory);
-			SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,50,90,ontology,factory);
+			SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
+			SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,60,ontology,factory);
+			SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
+			SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,500,1500,ontology,factory);
+			SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,20,50,ontology,factory);
 
 			//Register new streams in the engine
 			engine.registerStream(Stream_ConvWaterTemp);
