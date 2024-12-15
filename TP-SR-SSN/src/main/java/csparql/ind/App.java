@@ -64,7 +64,7 @@ public class App {
 				+ "     ) "
 				+ " } ";
 
-			/*String queryS1 = "REGISTER QUERY S1 AS "
+			String queryS1 = "REGISTER QUERY S1detection AS "
 				+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
 				+ "PREFIX sosa: <http://www.w3.org/ns/sosa/> "
 				+ "SELECT ?m ?pl "
@@ -80,7 +80,7 @@ public class App {
 				+ "  ?m 	    sosa:hosts       sosa:S_TransformerTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_ControlerTemp ."
 				+ "  ?m 	    sosa:hosts       sosa:S_GeneratorCurr ."
-				+ "  ?m 	    sosa:hosts       sosa:S_PlatformTemp ."
+				+ "  ?pl 	    sosa:hosts       sosa:S_PlatformTemp ."
 				+ "  :S_OilTemp :madeObservation ?o1 ."
 				+ "  :S_TransformerTemp :madeObservation ?o2 ."
 				+ "  :S_ControlerTemp :madeObservation ?o3 ."
@@ -97,8 +97,8 @@ public class App {
 				+ " 	?v3 > 40 && "
 				+ " 	?v4 < 800 && "
 				+ " 	?v5 < 35 "
-				+ "   ) "
-				+ " }} ";*/
+				+ "     ) "
+				+ " } ";
 
 
 			OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
@@ -109,43 +109,43 @@ public class App {
 			
 
 			// Valeurs min et max de ces 3 streams afin de provoquer la situation S6
-			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",1,60,90,ontology,factory);
-			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",1,20,35,ontology,factory);
-			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",1,45,80,ontology,factory);
+			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",1,20,90,ontology,factory);
+			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",1,20,90,ontology,factory);
+			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",1,20,90,ontology,factory);
 			
-			//SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
-			//SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,60,ontology,factory);
-			//SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
-			//SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,500,1500,ontology,factory);
-			//SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,20,50,ontology,factory);
+			SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
+			SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,80,ontology,factory);
+			SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
+			SensorsStreamer Stream_GeneratorCurr = new SensorsStreamer("Stream_S_GeneratorCurr",ns,"GeneratorCurr",2,500,1500,ontology,factory);
+			SensorsStreamer Stream_PlatformTemp = new SensorsStreamer("Stream_S_PlatformTemp",ns,"PlatformTemp",2,20,50,ontology,factory);
 
 			//Register new streams in the engine
 			engine.registerStream(Stream_ConvWaterTemp);
 			engine.registerStream(Stream_TransGridTemp);
 			engine.registerStream(Stream_GeneratorTemp);
 
-			//engine.registerStream(Stream_OilTemp);
-			//engine.registerStream(Stream_TransformerTemp);
-			//engine.registerStream(Stream_ControlerTemp);
-			//engine.registerStream(Stream_GeneratorCurr);
-			//engine.registerStream(Stream_PlatformTemp);
+			engine.registerStream(Stream_OilTemp);
+			engine.registerStream(Stream_TransformerTemp);
+			engine.registerStream(Stream_ControlerTemp);
+			engine.registerStream(Stream_GeneratorCurr);
+			engine.registerStream(Stream_PlatformTemp);
 			
 			Thread Stream_ConvWaterTemp_Thread = new Thread(Stream_ConvWaterTemp);
 			Thread Stream_TransGridTemp_Thread = new Thread(Stream_TransGridTemp);
 			Thread Stream_GeneratorTemp_Thread = new Thread(Stream_GeneratorTemp);
 
-			//Thread Stream_OilTemp_Thread = new Thread(Stream_OilTemp);
-			//Thread Stream_TransformerTemp_Thread = new Thread(Stream_TransformerTemp);
-			//Thread Stream_ControlerTemp_Thread = new Thread(Stream_ControlerTemp);
-			//Thread Stream_GeneratorCurr_Thread = new Thread(Stream_GeneratorCurr);
-			//Thread Stream_PlatformTemp_Thread = new Thread(Stream_PlatformTemp);
+			Thread Stream_OilTemp_Thread = new Thread(Stream_OilTemp);
+			Thread Stream_TransformerTemp_Thread = new Thread(Stream_TransformerTemp);
+			Thread Stream_ControlerTemp_Thread = new Thread(Stream_ControlerTemp);
+			Thread Stream_GeneratorCurr_Thread = new Thread(Stream_GeneratorCurr);
+			Thread Stream_PlatformTemp_Thread = new Thread(Stream_PlatformTemp);
 
 			//Register new query in the engine
 			CsparqlQueryResultProxy c_S6 = engine.registerQuery(queryS6, false);
-			//CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
+			CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
 
 			//Attach a result consumer to the query result proxy to print the results on the console
-			// c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
+			c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
 			c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
 
 			//Start streaming data
@@ -153,11 +153,11 @@ public class App {
 			Stream_TransGridTemp_Thread.start();
 			Stream_GeneratorTemp_Thread.start();
 			
-			//Stream_OilTemp_Thread.start();
-			//Stream_TransformerTemp_Thread.start();
-			//Stream_ControlerTemp_Thread.start();
-			//Stream_GeneratorCurr_Thread.start();
-			//Stream_PlatformTemp_Thread.start();
+			Stream_OilTemp_Thread.start();
+			Stream_TransformerTemp_Thread.start();
+			Stream_ControlerTemp_Thread.start();
+			Stream_GeneratorCurr_Thread.start();
+			Stream_PlatformTemp_Thread.start();
 
 		}catch (Exception e) {
 			logger.error(e.getMessage(), e);
