@@ -47,55 +47,55 @@ public class ConsoleFormatter extends ResultFormatter {
 
           System.out.println(machine + " and " + prodline + " are involved in situation " + situationName);
 
+          OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
+          OWLIndividual situation = factory.getOWLNamedIndividual(IRI.create(baseUri, situationName + "-" + System.currentTimeMillis()));
+          OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situation);
+          ontology.add(situationType);
+
           OWLClass Machine = factory.getOWLClass(IRI.create(baseUri + "Machine"));
-          OWLIndividual machineInd = factory.getOWLNamedIndividual(IRI.create(t.get(0)));
-          OWLClassAssertionAxiom machineType = factory.getOWLClassAssertionAxiom(Machine, machineInd);
-          ontology.add(machineType);
+          OWLIndividual M3 = factory.getOWLNamedIndividual(IRI.create(t.get(0)));
+          OWLClassAssertionAxiom machineM3 = factory.getOWLClassAssertionAxiom(Machine, M3);
+          ontology.add(machineM3);
 
-          OWLClass ProductionLine = factory.getOWLClass(IRI.create(baseUri + "Line"));
-          OWLIndividual prodLineInd = factory.getOWLNamedIndividual(IRI.create(t.get(1)));
-          OWLClassAssertionAxiom prodLineType = factory.getOWLClassAssertionAxiom(ProductionLine, prodLineInd);
-          ontology.add(prodLineType);
+          OWLClass Line = factory.getOWLClass(IRI.create(baseUri + "Line"));
+          OWLIndividual PL1 = factory.getOWLNamedIndividual(IRI.create(t.get(1)));
+          OWLClassAssertionAxiom prodPL1 = factory.getOWLClassAssertionAxiom(Line, PL1);
+          ontology.add(prodPL1);
 
-          if ("S6".equals(situationName)) {
-            System.out.println("Scenario S6 detected : M3 filter obstruction");
+          OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
+          OWLObjectPropertyAssertionAxiom concernByAssertM3 = factory.getOWLObjectPropertyAssertionAxiom(concernBy, M3, situation);
+          ontology.add(concernByAssertM3);
+          OWLObjectPropertyAssertionAxiom concernByAssertPL1 = factory.getOWLObjectPropertyAssertionAxiom(concernBy, PL1, situation);
+          ontology.add(concernByAssertPL1);
 
-            OWLClass Situation_S6 = factory.getOWLClass(IRI.create(baseUri + "Situation-S6"));
-            OWLIndividual situation_S6 = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));
-            OWLClassAssertionAxiom situationType_S6 = factory.getOWLClassAssertionAxiom(Situation_S6, situation_S6);
-            ontology.add(situationType_S6);
+          // if ("S6".equals(situationName)) {
+          //   System.out.println("Scenario S6 detected : M3 filter obstruction");
 
-            OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
-            OWLObjectPropertyAssertionAxiom concernByAssertMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S6, machineInd);
-            ontology.add(concernByAssertMachine);
-            OWLObjectPropertyAssertionAxiom concernByAssertProdLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S6, prodLineInd);
-            ontology.add(concernByAssertProdLine);
+          //   OWLClass Situation_S6 = factory.getOWLClass(IRI.create(baseUri + "Situation-S6"));
+          //   OWLIndividual situation_S6 = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));
+          //   OWLClassAssertionAxiom situationType_S6 = factory.getOWLClassAssertionAxiom(Situation_S6, situation_S6);
+          //   ontology.add(situationType_S6);
 
-          } else if ("S1".equals(situationName)) {
-            System.out.println("Scenario S1 detected : M1 oil leakage");
+          //   OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
+          //   OWLObjectPropertyAssertionAxiom concernByAssertMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S6, machineInd);
+          //   ontology.add(concernByAssertMachine);
+          //   OWLObjectPropertyAssertionAxiom concernByAssertProdLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S6, prodLineInd);
+          //   ontology.add(concernByAssertProdLine);
 
-            OWLClass Situation_S1 = factory.getOWLClass(IRI.create(baseUri + "Situation-S1"));
-            OWLIndividual situation_S1 = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));
-            OWLClassAssertionAxiom situationType_S1 = factory.getOWLClassAssertionAxiom(Situation_S1, situation_S1);
-            ontology.add(situationType_S1);
+          // } else if ("S1".equals(situationName)) {
+          //   System.out.println("Scenario S1 detected : M1 oil leakage");
 
-            OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
-            OWLObjectPropertyAssertionAxiom concernByAssertMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S1, machineInd);
-            ontology.add(concernByAssertMachine);
-            OWLObjectPropertyAssertionAxiom concernByAssertProdLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S1, prodLineInd);
-            ontology.add(concernByAssertProdLine);
-          }
+          //   OWLClass Situation_S1 = factory.getOWLClass(IRI.create(baseUri + "Situation-S1"));
+          //   OWLIndividual situation_S1 = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));
+          //   OWLClassAssertionAxiom situationType_S1 = factory.getOWLClassAssertionAxiom(Situation_S1, situation_S1);
+          //   ontology.add(situationType_S1);
 
-        //   OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
-        //   OWLIndividual situation = factory.getOWLNamedIndividual(IRI.create(baseUri + "-" + System.currentTimeMillis()));
-        //   OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situation);
-        //   ontology.add(situationType);
-
-        //   OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
-        //   OWLObjectPropertyAssertionAxiom concernByAssertMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation, machineInd);
-        //   ontology.add(concernByAssertMachine);
-        //   OWLObjectPropertyAssertionAxiom concernByAssertProdLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation, prodLineInd);
-        //   ontology.add(concernByAssertProdLine);
+          //   OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
+          //   OWLObjectPropertyAssertionAxiom concernByAssertMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S1, machineInd);
+          //   ontology.add(concernByAssertMachine);
+          //   OWLObjectPropertyAssertionAxiom concernByAssertProdLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, situation_S1, prodLineInd);
+          //   ontology.add(concernByAssertProdLine);
+          // }
 
           try {
             ontology.saveOntology();
