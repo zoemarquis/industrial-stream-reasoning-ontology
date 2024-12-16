@@ -58,12 +58,12 @@ public void update(Observable o, Object arg) {
                 OWLClassAssertionAxiom machineType = factory.getOWLClassAssertionAxiom(Machine, machineInstance);
                 ontology.add(machineType);
 
-                OWLClass ProductionLine = factory.getOWLClass(IRI.create(baseUri + "ProductionLine"));
+                OWLClass ProductionLine = factory.getOWLClass(IRI.create(baseUri + "Line"));
                 OWLIndividual productionLineInstance = factory.getOWLNamedIndividual(IRI.create(prodline));
                 OWLClassAssertionAxiom productionLineType = factory.getOWLClassAssertionAxiom(ProductionLine, productionLineInstance);
                 ontology.add(productionLineType);
 
-                OWLObjectProperty concerns = factory.getOWLObjectProperty(IRI.create(baseUri + "concerns"));
+                OWLObjectProperty concerns = factory.getOWLObjectProperty(IRI.create(baseUri + "concernsBy"));
                 OWLObjectPropertyAssertionAxiom situationConcernsMachine = factory.getOWLObjectPropertyAssertionAxiom(concerns, situationInstance, machineInstance);
                 ontology.add(situationConcernsMachine);
 
