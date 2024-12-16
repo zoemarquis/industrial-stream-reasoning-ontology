@@ -64,6 +64,38 @@ public class App {
 				+ "     ) "
 				+ " } ";
 
+			String queryS10 = "REGISTER QUERY S10detection AS "
+				+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
+				+ "PREFIX sosa: <http://www.w3.org/ns/sosa/> "
+				+ "SELECT ?m ?pl "
+				+ "FROM STREAM <Stream_S_ConvWaterTemp> [RANGE 15s STEP 5s] "
+				+ "FROM STREAM <Stream_S_TransGridTemp> [RANGE 15s STEP 5s] "
+				+ "FROM STREAM <Stream_S_GeneratorTemp> [RANGE 15s STEP 5s] "
+				+ "FROM STREAM <Stream_S_ConverterTemp> [RANGE 15s STEP 5s] "
+				+ "FROM <http://streamreasoning.org/Ontology-TP> "
+				+ "WHERE { "
+				+ "  ?m         :isPartOf        ?pl ."
+				+ "  ?m         sosa:hosts       sosa:S_ConvWaterTemp ."
+				+ "  ?m         sosa:hosts       sosa:S_TransGridTemp ."
+				+ "  ?m         sosa:hosts       sosa:S_GeneratorTemp ."
+				+ "  ?m         sosa:hosts       sosa:S_ConverterTemp ."
+				+ "  :S_ConvWaterTemp :madeObservation ?o1 ."
+				+ "  :S_TransGridTemp :madeObservation ?o2 ."
+				+ "  :S_GeneratorTemp :madeObservation ?o3 ."
+				+ "  :S_ConverterTemp :madeObservation ?o4 ."
+				+ "  ?o1        :hasSimpleResult ?v1 ."
+				+ "  ?o2        :hasSimpleResult ?v2 ."
+				+ "  ?o3        :hasSimpleResult ?v3 ."
+				+ "  ?o4        :hasSimpleResult ?v4 ."
+				+ " FILTER ( "
+				+ "     ?v1 > 80 && "
+				+ "     ?v2 < 35 && "
+				+ "     ?v3 > 45 && "
+				+ "     ?v4 > 60 "
+				+ " ) "
+				+ "}";
+			
+
 			// String queryS1 = "REGISTER QUERY S1detection AS "
 			// 	+ "PREFIX : <http://semanticweb.org/Ontology-TP#> "
 			// 	+ "PREFIX sosa: <http://www.w3.org/ns/sosa/> "
@@ -109,10 +141,17 @@ public class App {
 			
 
 			// Valeurs min et max de ces 3 streams afin de provoquer la situation S6
-			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",1,20,90,ontology,factory);
-			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",1,20,90,ontology,factory);
-			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",1,20,90,ontology,factory);
+			SensorsStreamer Stream_ConvWaterTemp = new SensorsStreamer("Stream_S_ConvWaterTemp",ns,"ConvWaterTemp",2,20,100,ontology,factory);
+			SensorsStreamer Stream_TransGridTemp = new SensorsStreamer("Stream_S_TransGridTemp",ns,"TransGridTemp",2,20,100,ontology,factory);
+			SensorsStreamer Stream_GeneratorTemp = new SensorsStreamer("Stream_S_GeneratorTemp",ns,"GeneratorTemp",2,20,100,ontology,factory);
 			
+			SensorsStreamer Stream_ConverterTemp = new SensorsStreamer("Stream_S_ConverterTemp", ns, "ConverterTemp", 2, 20, 100, ontology, factory);
+
+
+			
+
+
+
 			// SensorsStreamer Stream_OilTemp = new SensorsStreamer("Stream_S_OilTemp",ns,"OilTemp",2,20,80,ontology,factory);
 			// SensorsStreamer Stream_TransformerTemp = new SensorsStreamer("Stream_S_TransformerTemp",ns,"TransformerTemp",2,20,80,ontology,factory);
 			// SensorsStreamer Stream_ControlerTemp = new SensorsStreamer("Stream_S_ControlerTemp",ns,"ControlerTemp",2,20,80,ontology,factory);
@@ -123,6 +162,7 @@ public class App {
 			engine.registerStream(Stream_ConvWaterTemp);
 			engine.registerStream(Stream_TransGridTemp);
 			engine.registerStream(Stream_GeneratorTemp);
+			engine.registerStream(Stream_ConverterTemp);
 
 			// engine.registerStream(Stream_OilTemp);
 			// engine.registerStream(Stream_TransformerTemp);
@@ -133,6 +173,7 @@ public class App {
 			Thread Stream_ConvWaterTemp_Thread = new Thread(Stream_ConvWaterTemp);
 			Thread Stream_TransGridTemp_Thread = new Thread(Stream_TransGridTemp);
 			Thread Stream_GeneratorTemp_Thread = new Thread(Stream_GeneratorTemp);
+			Thread Stream_ConverterTemp_Thread = new Thread(Stream_ConverterTemp);
 
 			// Thread Stream_OilTemp_Thread = new Thread(Stream_OilTemp);
 			// Thread Stream_TransformerTemp_Thread = new Thread(Stream_TransformerTemp);
@@ -142,16 +183,19 @@ public class App {
 
 			//Register new query in the engine
 			CsparqlQueryResultProxy c_S6 = engine.registerQuery(queryS6, false);
+			CsparqlQueryResultProxy c_S10 = engine.registerQuery(queryS10, false);
 			// CsparqlQueryResultProxy c_S1 = engine.registerQuery(queryS1, false);
 
 			//Attach a result consumer to the query result proxy to print the results on the console
 			c_S6.addObserver(new ConsoleFormatter("S6",ns,ontology,factory));	
+			c_S10.addObserver(new ConsoleFormatter("S10", ns, ontology, factory));
 			// c_S1.addObserver(new ConsoleFormatter("S1",ns,ontology,factory));
 
 			//Start streaming data
 			Stream_ConvWaterTemp_Thread.start();
 			Stream_TransGridTemp_Thread.start();
 			Stream_GeneratorTemp_Thread.start();
+			Stream_ConverterTemp_Thread.start();
 			
 			// Stream_OilTemp_Thread.start();
 			// Stream_TransformerTemp_Thread.start();

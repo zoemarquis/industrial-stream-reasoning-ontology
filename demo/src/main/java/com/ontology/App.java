@@ -70,9 +70,13 @@ public class App {
 		OWLClass Situation = factory.getOWLClass(IRI.create(ns, "Situation"));
 		ontology.add(factory.getOWLDeclarationAxiom(Situation));
 		
-		OWLClass Situation_S1 = factory.getOWLClass(IRI.create(ns, "Situation-S1"));
-		ontology.add(factory.getOWLDeclarationAxiom(Situation_S1));
-		ontology.add(factory.getOWLSubClassOfAxiom(Situation_S1, Situation));
+		//OWLClass Situation_S1 = factory.getOWLClass(IRI.create(ns, "Situation-S1"));
+		//ontology.add(factory.getOWLDeclarationAxiom(Situation_S1));
+		//ontology.add(factory.getOWLSubClassOfAxiom(Situation_S1, Situation));
+
+		OWLClass Situation_S10 = factory.getOWLClass(IRI.create(ns, "Situation-S10"));
+		ontology.add(factory.getOWLDeclarationAxiom(Situation_S10));
+		ontology.add(factory.getOWLSubClassOfAxiom(Situation_S10, Situation));
 
 		OWLClass Situation_S6 = factory.getOWLClass(IRI.create(ns, "Situation-S6"));
 		ontology.add(factory.getOWLDeclarationAxiom(Situation_S6));
