@@ -1,0 +1,3058 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semanticweb.org/Ontology-TP#"
+     xml:base="http://semanticweb.org/Ontology-TP"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:Ontology-TP="http://semanticweb.org/Ontology-TP#">
+    <owl:Ontology rdf:about="http://semanticweb.org/Ontology-TP"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp -->
+
+
+    <rdfs:Datatype rdf:about="https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#concernBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#concernBy">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#hasObservableProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#hasObservableProperty">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#hasObservation -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#hasObservation">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#hasTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#hasTime">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#isInSituation -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#isInSituation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#isPartOf">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#situationTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/Ontology-TP#situationTime">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hosts -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hosts">
+        <rdfs:domain rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeObservation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSimpleResult -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Line -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Line">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Machine -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Machine">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.org/Ontology-TP#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Resource -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Resource"/>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Situation -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Situation"/>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Situation-S10 -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Situation-S10">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#Situation-S6 -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/Ontology-TP#Situation-S6">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.org/Ontology-TP#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M1">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ControlerTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorCurr"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/OilTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/TransformerTemp"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_ControlerTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorCurr"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_OilTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_TransformerTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M2">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GearboxTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorSpeed"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_GearboxTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorSpeed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M3">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219244"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219247"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219251"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219254"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219258"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219262"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219265"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219268"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219272"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219276"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219279"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219283"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219286"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219290"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219294"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219297"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219301"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219305"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219309"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219312"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219316"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219320"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219324"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219328"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219333"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219337"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219342"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219346"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219350"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219354"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219357"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219361"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219365"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219368"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219372"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219376"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219380"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219383"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219387"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219391"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219395"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219398"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219403"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219406"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219410"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219414"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219418"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219422"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219426"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219430"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219434"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219437"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219442"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219446"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219450"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219454"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219458"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219462"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219466"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219471"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219475"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219480"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219485"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219489"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219493"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219498"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219502"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219528"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219536"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219541"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219545"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219549"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219553"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219557"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219562"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219567"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219571"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219575"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219580"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219584"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219589"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219594"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219598"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219602"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219607"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219611"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219615"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219619"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219624"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219628"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219633"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219638"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219643"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219648"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219652"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219657"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219143"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219147"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219150"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219153"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219157"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219160"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219163"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219166"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219168"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219171"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219175"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219178"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219181"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219185"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219188"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219191"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219195"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219198"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219201"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219204"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219208"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219211"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219214"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219217"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ConvWaterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/ConverterTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/GeneratorTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/TransGridTemp"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_ConvWaterTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_ConverterTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_GeneratorTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_TransGridTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#M4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#M4">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Machine"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/RotorPitchAngle"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/RotorSpeed"/>
+        <isPartOf rdf:resource="http://semanticweb.org/Ontology-TP#PL1"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_RotorPitchAngle"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_RotorSpeed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#PL1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#PL1">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Line"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219244"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219247"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219251"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219254"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219258"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219262"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219265"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219268"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219272"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219276"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219279"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219283"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219286"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219290"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219294"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219297"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219301"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219305"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219309"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219312"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219316"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219320"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219324"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219328"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219333"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219337"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219342"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219346"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219350"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219354"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219357"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219361"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219365"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219368"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219372"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219376"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219380"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219383"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219387"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219391"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219395"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219398"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219403"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219406"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219410"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219414"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219418"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219422"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219426"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219430"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219434"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219437"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219442"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219446"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219450"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219454"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219458"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219462"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219466"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219471"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219475"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219480"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219485"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219489"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219493"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219498"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219502"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219528"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219536"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219541"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219545"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219549"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219553"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219557"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219562"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219567"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219571"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219575"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219580"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219584"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219589"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219594"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219598"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219602"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219607"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219611"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219615"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219619"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219624"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219628"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219633"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219638"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219643"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219648"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219652"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S10-1734443219657"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219143"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219147"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219150"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219153"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219157"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219160"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219163"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219166"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219168"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219171"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219175"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219178"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219181"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219185"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219188"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219191"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219195"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219198"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219201"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219204"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219208"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219211"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219214"/>
+        <concernBy rdf:resource="http://semanticweb.org/Ontology-TP#S6-1734443219217"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/EnvironmentTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/PlatformTemp"/>
+        <hasObservableProperty rdf:resource="http://www.w3.org/ns/sosa/PowerOutput"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_EnvironmentTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_PlatformTemp"/>
+        <sosa:hosts rdf:resource="http://www.w3.org/ns/sosa/S_PowerOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219244 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219244">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219247 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219247">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219251 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219251">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219254 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219254">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219258 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219258">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219262 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219262">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219265 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219265">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219268 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219268">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219272 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219272">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219276 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219276">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219279 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219279">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219283 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219283">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219286 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219286">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219290 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219290">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219294 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219294">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219297 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219297">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219301 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219301">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219305 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219305">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219309 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219309">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219312 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219312">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219316 -->
+
+
+    <rdf:Description rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219316">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219320 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219320">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219324 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219324">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219328 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219328">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219333 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219333">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219337 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219337">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219342 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219342">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219346 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219346">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219350 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219350">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219354 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219354">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219357 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219357">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219361 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219361">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219365 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219365">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219368 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219368">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219372 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219372">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219376 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219376">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219380 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219380">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219383 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219383">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219387 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219387">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219391 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219391">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219395 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219395">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219398 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219398">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219403 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219403">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219406 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219406">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219410 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219410">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219414 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219414">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219418 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219418">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219422 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219422">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219426 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219426">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219430 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219430">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219434 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219434">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219437 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219437">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219442 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219442">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219446 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219446">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219450 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219450">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219454 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219454">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219458 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219458">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219462 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219462">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219466 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219466">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219471 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219471">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219475 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219475">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219480 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219480">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219485 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219485">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219489 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219489">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219493 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219493">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219498 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219498">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219502 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219502">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219528 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219528">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219536 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219536">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219541 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219541">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219545 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219545">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219549 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219549">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219553 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219553">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219557 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219557">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219562 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219562">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219567 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219567">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219571 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219571">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219575 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219575">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219580 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219580">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219584 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219584">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219589 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219589">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219594 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219594">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219598 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219598">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219602 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219602">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219607 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219607">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219611 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219611">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219615 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219615">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219619 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219619">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219624 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219624">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219628 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219628">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219633 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219633">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219638 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219638">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219643 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219643">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219648 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219648">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219652 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219652">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S10-1734443219657 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S10-1734443219657">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219143 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219143">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219147 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219147">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219150 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219150">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219153 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219153">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219157 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219157">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219160 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219160">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219163 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219163">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219166 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219166">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219168 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219168">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219171 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219171">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219175 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219175">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219178 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219178">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219181 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219181">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219185 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219185">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219188 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219188">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219191 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219191">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219195 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219195">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219198 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219198">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219201 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219201">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219204 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219204">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219208 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219208">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219211 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219211">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219214 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219214">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S6-1734443219217 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S6-1734443219217">
+        <rdf:type rdf:resource="http://semanticweb.org/Ontology-TP#Situation-S6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-0"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-1"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-10"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-2"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-3"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-4"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-5"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-6"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-7"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-8"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-0"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>28^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-1"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>64^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-10"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>49^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-2"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>26^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-3"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>30^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-4"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>95^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-5"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>55^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-6"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>97^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-7"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>41^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-8"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>51^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConvWaterTemp-Obs-9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-9"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConvWaterTemp"/>
+        <sosa:hasSimpleResult>53^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-0"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-1"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-10"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-2"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-3"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-4"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-5"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-6"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-7"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-8"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-0"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>32^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-1"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>47^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-10"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>78^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-2"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>43^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-3"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>80^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-4"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>81^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-5"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>20^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-6"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>88^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-7"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>82^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-8"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>23^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_ConverterTemp-Obs-9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-9"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#ConverterTemp"/>
+        <sosa:hasSimpleResult>20^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-0"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-1"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-10"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-2"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-3"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-4"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-5"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-6"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-7"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-8"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-0"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>99^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-1"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>36^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-10"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>93^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-2"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>32^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-3"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>94^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-4"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>97^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-5"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>53^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-6"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>98^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-7"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>44^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-8"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>42^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_GeneratorTemp-Obs-9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-9"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#GeneratorTemp"/>
+        <sosa:hasSimpleResult>51^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-0"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-1"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-10"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-2"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-3"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-4"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-5"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-6"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-7"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-8"/>
+        <sosa:madeObservation rdf:resource="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-0"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>88^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-1"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>44^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-10"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>78^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-2"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>35^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-3"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>39^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-4"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>81^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-5"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>67^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-6"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>35^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-7"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>34^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-8"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>26^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#S_TransGridTemp-Obs-9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <hasTime rdf:resource="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-9"/>
+        <sosa:observedProperty rdf:resource="http://semanticweb.org/Ontology-TP#TransGridTemp"/>
+        <sosa:hasSimpleResult>21^^http://www.w3.org/2001/XMLSchema#integer</sosa:hasSimpleResult>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticweb.org/Ontology-TP#TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://semanticweb.org/Ontology-TP#TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-0">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:38.959^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:41.17^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:47:01.146^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:43.39^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:45.601^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:47.82^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:50.039^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:52.258^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:54.492^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:56.69^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConvWaterTemp-9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:58.945^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-0">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:38.959^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:41.196^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:47:01.172^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:43.39^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:45.601^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:47.82^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:50.039^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:52.258^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:54.492^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:56.69^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_ConverterTemp-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_ConverterTemp-9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:58.945^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-0">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:38.959^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:41.196^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:47:01.146^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:43.418^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:45.601^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:47.821^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:50.039^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:52.258^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:54.492^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:56.69^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_GeneratorTemp-9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:58.945^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-0">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:38.959^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:41.17^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:47:01.146^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:43.391^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:45.601^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:47.819^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:50.039^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:52.258^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:54.48^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:56.69^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#t-obs-S_TransGridTemp-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#t-obs-S_TransGridTemp-9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp>2024-12-17 14:46:58.914^^http://www.w3.org/2001/XMLSchema#dateTimeStamp</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ControlerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ControlerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/EnvironmentTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/EnvironmentTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GearboxTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GearboxTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorCurr -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorCurr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/OilTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/OilTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/PlatformTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/PlatformTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/PowerOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/PowerOutput">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/RotorPitchAngle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/RotorPitchAngle">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/RotorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/RotorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ControlerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ControlerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ConvWaterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ConvWaterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_ConverterTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_ConverterTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_EnvironmentTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_EnvironmentTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GearboxTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GearboxTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorCurr -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorCurr">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_GeneratorTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_GeneratorTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_OilTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_OilTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_PlatformTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_PlatformTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_PowerOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_PowerOutput">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_RotorPitchAngle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_RotorPitchAngle">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_RotorSpeed -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_RotorSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/S_TransformerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/S_TransformerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/TransGridTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/TransGridTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/TransformerTemp -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/TransformerTemp">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7.2018-09-02T11:51:43Z) https://github.com/owlcs/owlapi/ -->
+
+
+/ -->
+
+

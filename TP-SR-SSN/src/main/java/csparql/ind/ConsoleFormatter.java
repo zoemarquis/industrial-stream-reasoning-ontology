@@ -48,7 +48,7 @@ public class ConsoleFormatter extends ResultFormatter {
                 System.out.println(machine + " and " + prodline + " are involved in situation " + situationName);
 
                 try {
-                    OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
+                    OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation-" + situationName));
                     OWLIndividual situationInstance = factory.getOWLNamedIndividual(IRI.create(baseUri, situationName + "-" + System.currentTimeMillis()));
                     OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situationInstance);
                     ontology.add(situationType);
