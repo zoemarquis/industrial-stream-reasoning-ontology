@@ -63,7 +63,7 @@ public class ConsoleFormatter extends ResultFormatter {
                     OWLClassAssertionAxiom productionLineType = factory.getOWLClassAssertionAxiom(ProductionLine, productionLineInstance);
                     ontology.add(productionLineType);
 
-                    OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernsBy"));
+                    OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernBy"));
                     OWLObjectPropertyAssertionAxiom situationConcernsMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, machineInstance, situationInstance);
                     ontology.add(situationConcernsMachine);
 
