@@ -49,7 +49,7 @@ public class ConsoleFormatter extends ResultFormatter {
 
                 try {
                     OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
-                    OWLIndividual situationInstance = factory.getOWLNamedIndividual(IRI.create(baseUri + situationName + "-" + System.currentTimeMillis()));
+                    OWLIndividual situationInstance = factory.getOWLNamedIndividual(IRI.create(baseUri, situationName + "-" + System.currentTimeMillis()));
                     OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situationInstance);
                     ontology.add(situationType);
 
