@@ -32,52 +32,52 @@ public class ConsoleFormatter extends ResultFormatter {
     }
 
     @Override
-public void update(Observable o, Object arg) {
+    public void update(Observable o, Object arg) {
 
-      RDFTable rdfTable = (RDFTable)arg;
-    System.out.println();
+        RDFTable rdfTable = (RDFTable)arg;
+        System.out.println();
 
-      if (rdfTable.size()==0)
-        System.out.println("NO RESULT");
-    	else {
-        System.out.println(situationName + " DETECTED. "+ rdfTable.size() + " result at SystemTime: "+System.currentTimeMillis());
-        rdfTable.stream().forEach((t) -> {
-            String machine = t.get(0);
-            String prodline = t.get(1);
+        if (rdfTable.size()==0)
+            System.out.println("NO RESULT");
+            else {
+            System.out.println(situationName + " DETECTED. "+ rdfTable.size() + " result at SystemTime: "+System.currentTimeMillis());
+            rdfTable.stream().forEach((t) -> {
+                String machine = t.get(0);
+                String prodline = t.get(1);
 
-            System.out.println(machine + " and " + prodline + " are involved in situation " + situationName);
+                System.out.println(machine + " and " + prodline + " are involved in situation " + situationName);
 
-            try {
-                OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
-                OWLIndividual situationInstance = factory.getOWLNamedIndividual(IRI.create(baseUri + situationName + "-" + System.currentTimeMillis()));
-                OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situationInstance);
-                ontology.add(situationType);
+                try {
+                    OWLClass Situation = factory.getOWLClass(IRI.create(baseUri + "Situation"));
+                    OWLIndividual situationInstance = factory.getOWLNamedIndividual(IRI.create(baseUri + situationName + "-" + System.currentTimeMillis()));
+                    OWLClassAssertionAxiom situationType = factory.getOWLClassAssertionAxiom(Situation, situationInstance);
+                    ontology.add(situationType);
 
-                OWLClass Machine = factory.getOWLClass(IRI.create(baseUri + "Machine"));
-                OWLIndividual machineInstance = factory.getOWLNamedIndividual(IRI.create(machine));
-                OWLClassAssertionAxiom machineType = factory.getOWLClassAssertionAxiom(Machine, machineInstance);
-                ontology.add(machineType);
+                    OWLClass Machine = factory.getOWLClass(IRI.create(baseUri + "Machine"));
+                    OWLIndividual machineInstance = factory.getOWLNamedIndividual(IRI.create(machine));
+                    OWLClassAssertionAxiom machineType = factory.getOWLClassAssertionAxiom(Machine, machineInstance);
+                    ontology.add(machineType);
 
-                OWLClass ProductionLine = factory.getOWLClass(IRI.create(baseUri + "Line"));
-                OWLIndividual productionLineInstance = factory.getOWLNamedIndividual(IRI.create(prodline));
-                OWLClassAssertionAxiom productionLineType = factory.getOWLClassAssertionAxiom(ProductionLine, productionLineInstance);
-                ontology.add(productionLineType);
+                    OWLClass ProductionLine = factory.getOWLClass(IRI.create(baseUri + "Line"));
+                    OWLIndividual productionLineInstance = factory.getOWLNamedIndividual(IRI.create(prodline));
+                    OWLClassAssertionAxiom productionLineType = factory.getOWLClassAssertionAxiom(ProductionLine, productionLineInstance);
+                    ontology.add(productionLineType);
 
-                OWLObjectProperty concerns = factory.getOWLObjectProperty(IRI.create(baseUri + "concernsBy"));
-                OWLObjectPropertyAssertionAxiom situationConcernsMachine = factory.getOWLObjectPropertyAssertionAxiom(concerns, situationInstance, machineInstance);
-                ontology.add(situationConcernsMachine);
+                    OWLObjectProperty concernBy = factory.getOWLObjectProperty(IRI.create(baseUri + "concernsBy"));
+                    OWLObjectPropertyAssertionAxiom situationConcernsMachine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, machineInstance, situationInstance);
+                    ontology.add(situationConcernsMachine);
 
-                OWLObjectPropertyAssertionAxiom situationConcernsProductionLine = factory.getOWLObjectPropertyAssertionAxiom(concerns, situationInstance, productionLineInstance);
-                ontology.add(situationConcernsProductionLine);
+                    OWLObjectPropertyAssertionAxiom situationConcernsProductionLine = factory.getOWLObjectPropertyAssertionAxiom(concernBy, productionLineInstance, situationInstance);
+                    ontology.add(situationConcernsProductionLine);
 
-                ontology.saveOntology();
-                System.out.println("Ontology saved successfully for " + situationName);
+                    ontology.saveOntology();
+                    System.out.println("Ontology saved successfully for " + situationName);
 
-            } catch (OWLOntologyStorageException e) {
-                System.err.println("Error saving ontology: " + e.getMessage());
-                e.printStackTrace();
-            }
-        });
+                } catch (OWLOntologyStorageException e) {
+                    System.err.println("Error saving ontology: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            });
+        }
     }
-}
 }
