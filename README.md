@@ -1,6 +1,8 @@
 
 # Industrial stream reasoning system
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
+
 ## 🔍 Overview
 This project implements a stream reasoning system for real-time detection of abnormal situations in an industrial environment. It uses C-SPARQL to process RDF streams from various sensors in a production line and detect predefined anomalies based on expert knowledge encoded in an ontology.
 
